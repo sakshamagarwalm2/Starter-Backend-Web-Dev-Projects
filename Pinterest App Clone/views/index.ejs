@@ -1,0 +1,22 @@
+<% include ./partials/header.ejs %>
+
+<div class="w-full h-screen bg-center bg-cover bg-[url(https://free4kwallpapers.com/uploads/originals/2020/07/10/space-exploration-wallpaper.png)] flex items-center justify-center">
+  <div class="w-[25vw] bg-slate-50/75 px-16 py-7 rounded-[30px]">
+    <div class=" w-full h-10 mb-4 bg-center bg-no-repeat bg-[url(https://logosandtypes.com/wp-content/uploads/2020/07/pinterest.svg)]"></div>
+    <h1 class="text-2xl text-center font-semibold text-zinc-900 tracking-tighter capitalize leading-none my-1">Wellcome To Pinterest <span class="text-red-500">.</span></h1>
+    <% if(error.length > 0){ %>
+<p class="font-medium text-red-600 capitalize my-1"><%=error%></p>
+      <% } %>
+    <form action="/login" method="post">
+      <input class="block border-2 rounded-md mt-2 w-full px-3 py-2" type="text" name="username" placeholder="Username">
+      <input class="block border-2 rounded-md mt-2 w-full px-3 py-2" type="password" name="password" placeholder="Password">
+      <a class="mt-2 font-semibold inline-block text-zinc-500" href="#">Forgot password?</a>
+      <input class="block border-2 mt-5 w-full px-3 py-2 bg-red-500 text-white rounded-full" type="Submit" value="Login">
+      <p class="text-xs text-zinc-700 mt-7 mb-1 w-3/4 mx-auto text-center">Lorem ipsum dolor sit <br><span class="font-semibold">consectetur adipisicing elit.</span><br>Quae eos soluta commodiarum. Cum, ab?</p><hr>
+      <p class="text-xs text-zinc-700 mt-1 mb-1 w-3/4 mx-auto text-center"><span class="font-semibold">consectetur adipisicing elit ?</span></p>
+      <a class="inline-block mt-7 text-sm font-semibold text-zinc-700 text-center w-full hover:text-sky-300" href="/register">Don't have an account ?</a>
+    </form>
+  </div>
+</div>
+  
+<% include ./partials/footer.ejs %>
